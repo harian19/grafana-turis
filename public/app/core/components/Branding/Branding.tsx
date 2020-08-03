@@ -8,7 +8,7 @@ export interface BrandComponentProps {
 }
 
 const LoginLogo: FC<BrandComponentProps> = ({ className }) => {
-  return <img className={className} src="public/img/grafana_icon.svg" alt="Grafana" />;
+  return <img className={className} src="public/img/fav32.png" alt="Grafana" />;
 };
 
 const LoginBackground: FC<BrandComponentProps> = ({ className, children }) => {
@@ -42,10 +42,7 @@ export class Branding {
   static LoginTitle = 'Welcome to Donaldson';
   static GetLoginSubTitle = () => {
     const slogans = [
-      "Don't get in the way of the data",
-      'Your single pane of glass',
-      'Built better together',
-      'Democratising data',
+      "Link - IOT",
     ];
     const count = slogans.length;
     return slogans[Math.floor(Math.random() * count)];
