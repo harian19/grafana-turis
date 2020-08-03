@@ -62,7 +62,7 @@ export class GrafanaBootConfig implements GrafanaConfig {
 
     const defaults = {
       datasources: {},
-      windowTitlePrefix: 'The Link - ',
+      windowTitlePrefix: 'Donaldson - ',
       panels: {},
       newPanelTitle: 'Panel Title',
       playlist_timespan: '1m',
