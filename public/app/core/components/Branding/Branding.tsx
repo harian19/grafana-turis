@@ -8,7 +8,7 @@ export interface BrandComponentProps {
 }
 
 const LoginLogo: FC<BrandComponentProps> = ({ className }) => {
-  return <img className={className} src="public/img/fav32.png" alt="Grafana" />;
+  return <img className={className} src="public/img/grafan_icon.svg" alt="Grafana" />;
 };
 
 const LoginBackground: FC<BrandComponentProps> = ({ className, children }) => {
