@@ -38,14 +38,14 @@ export class Branding {
   static LoginBackground = LoginBackground;
   static MenuLogo = MenuLogo;
   static LoginBoxBackground = LoginBoxBackground;
-  static AppTitle = 'The Link';
-  static LoginTitle = 'Welcome to The Link';
+  static AppTitle = 'Donaldson';
+  static LoginTitle = 'Welcome to Donaldson';
   static GetLoginSubTitle = () => {
     const slogans = [
-      "Don't get in the way of the data",
-      'Your single pane of glass',
-      'Built better together',
-      'Democratising data',
+      "Link IOT",
+      'Link IOT',
+      'Link IOT',
+      'Link IOT',
     ];
     const count = slogans.length;
     return slogans[Math.floor(Math.random() * count)];
