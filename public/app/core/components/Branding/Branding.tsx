@@ -41,6 +41,6 @@ export class Branding {
   static AppTitle = 'Donaldson';
   static LoginTitle = 'Welcome to Donaldson';
   static GetLoginSubTitle = () => {
-    return 'Link - IOT'
+    return 'Link - IOT';
   };
 }
