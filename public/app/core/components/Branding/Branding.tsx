@@ -42,10 +42,10 @@ export class Branding {
   static LoginTitle = 'Welcome to Donaldson';
   static GetLoginSubTitle = () => {
     const slogans = [
-      "Link IOT",
-      'Link IOT',
-      'Link IOT',
-      'Link IOT',
+      "Don't get in the way of the data",
+      'Your single pane of glass',
+      'Built better together',
+      'Democratising data',
     ];
     const count = slogans.length;
     return slogans[Math.floor(Math.random() * count)];

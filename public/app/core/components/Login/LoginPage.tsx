@@ -21,7 +21,7 @@ export const LoginPage: FC = () => {
           <Branding.LoginLogo className={loginStyles.loginLogo} />
           <div className={loginStyles.titleWrapper}>
             <h1 className={loginStyles.mainTitle}>{Branding.LoginTitle}</h1>
-            <h3 className={loginStyles.subTitle}>{Branding.GetLoginSubTitle()}</h3>
+            <h3 className={loginStyles.subTitle}>Link - IOT</h3>
           </div>
         </div>
         <LoginCtrl>
