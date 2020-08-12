@@ -12,21 +12,21 @@ export interface FooterLink {
 export let getFooterLinks = (): FooterLink[] => {
   return [
     {
-      text: 'Documentation-YT',
+      text: 'Donaldson',
       icon: 'document-info',
-      url: 'https://www.youtube.com/',
+      url: 'https://www.donaldson.com/en-in/',
       target: '_blank',
     },
     {
-      text: 'Support-ESPN',
+      text: 'About Us',
       icon: 'question-circle',
-      url: 'https://www.espn.com/soccer/scoreboard',
+      url: 'https://www.donaldson.com/en-in/about-us/',
       target: '_blank',
     },
     {
-      text: 'Community-FB',
+      text: 'Contact',
       icon: 'comments-alt',
-      url: 'https://www.facebook.com/',
+      url: 'hhttps://www.donaldson.com/en-in/contact/',
       target: '_blank',
     },
   ];
