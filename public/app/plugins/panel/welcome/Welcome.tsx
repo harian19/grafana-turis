@@ -7,8 +7,8 @@ import lightBackground from './img/background_light.svg';
 const helpOptions = [
   { value: 0, label: 'Documentation', href: 'https://grafana.com/docs/grafana/latest' },
   { value: 1, label: 'Tutorials', href: 'https://www.donaldson.com/en-in/about-us/' },
-  { value: 2, label: 'About us', href: 'https://www.donaldson.com/en-in/about-us/' },
-  { value: 3, label: 'Public Slack', href: 'https://www.donaldson.com/en-in/about-us/ },
+  { value: 2, label: 'ESPN', href: 'https://www.donaldson.com/en-in/about-us/' },
+  { value: 3, label: 'Public Slack', href: 'https://www.donaldson.com/en-in/about-us/' },
 ];
 
 export const WelcomeBanner: FC = () => {
