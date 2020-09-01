@@ -8,7 +8,7 @@ export interface BrandComponentProps {
 }
 
 const LoginLogo: FC<BrandComponentProps> = ({ className }) => {
-  return <img className={className} src="public/img/grafana_icon.svg" alt="Grafana" />;
+  return <img className={className} src="public/img/DonaldsonAALogo.png" alt="Grafana" />;
 };
 
 const LoginBackground: FC<BrandComponentProps> = ({ className, children }) => {
@@ -26,9 +26,9 @@ const MenuLogo: FC<BrandComponentProps> = ({ className }) => {
 };
 
 const LoginBoxBackground = () => {
-  const theme = useTheme();
+  // const theme = useTheme();
   return css`
-    background: ${theme.isLight ? 'rgba(6, 30, 200, 0.1 )' : 'rgba(18, 28, 41, 0.65)'};
+    background: white;
     background-size: cover;
   `;
 };
@@ -39,7 +39,7 @@ export class Branding {
   static MenuLogo = MenuLogo;
   static LoginBoxBackground = LoginBoxBackground;
   static AppTitle = 'Donaldson';
-  static LoginTitle = 'Welcome to Donaldson';
+  static LoginTitle = 'Donaldson Contamination Monitoring';
   static GetLoginSubTitle = () => {
     const slogans = [
       "Don't get in the way of the data",

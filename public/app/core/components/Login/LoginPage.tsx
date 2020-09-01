@@ -21,7 +21,7 @@ export const LoginPage: FC = () => {
           <Branding.LoginLogo className={loginStyles.loginLogo} />
           <div className={loginStyles.titleWrapper}>
             <h1 className={loginStyles.mainTitle}>{Branding.LoginTitle}</h1>
-            <h3 className={loginStyles.subTitle}>Link - IOT</h3>
+            {/* <h3 className={loginStyles.subTitle}>Link - IOT</h3> */}
           </div>
         </div>
         <LoginCtrl>
@@ -99,8 +99,8 @@ export const getLoginStyles = (theme: GrafanaTheme) => {
     `,
     loginLogo: css`
       width: 100%;
-      max-width: 100px;
-      margin-bottom: 15px;
+      max-width: 380px;
+      margin-bottom: 40px;
     `,
     loginLogoWrapper: css`
       display: flex;
