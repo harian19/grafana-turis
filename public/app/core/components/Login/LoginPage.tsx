@@ -88,7 +88,7 @@ export const getLoginStyles = (theme: GrafanaTheme) => {
       background-repeat: no-repeat;
       min-width: 100%;
       margin-left: 0;
-      background-color: $black;
+      background-color: white;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -110,6 +110,7 @@ export const getLoginStyles = (theme: GrafanaTheme) => {
       padding: ${theme.spacing.lg};
     `,
     titleWrapper: css`
+      color: black;
       text-align: center;
     `,
     mainTitle: css`
@@ -139,7 +140,7 @@ export const getLoginStyles = (theme: GrafanaTheme) => {
       justify-content: center;
     `,
     loginInnerBox: css`
-      padding: ${theme.spacing.xl};
+      padding: 32px 32px 0px 32px;
       @media (max-width: 320px) {
         padding: ${theme.spacing.lg};
       }
@@ -148,7 +149,7 @@ export const getLoginStyles = (theme: GrafanaTheme) => {
       align-items: center;
       justify-content: center;
       flex-grow: 1;
-      max-width: 415px;
+      max-width: 600px;
       width: 100%;
       transform: translate(0px, 0px);
       transition: 0.25s ease;
