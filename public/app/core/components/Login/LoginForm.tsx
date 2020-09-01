@@ -24,7 +24,12 @@ const wrapperStyles = css`
   padding-bottom: 16px;
 `;
 
+const fontOverrideStyles = css`
+  font-size: 18px;
+`;
+
 export const submitButton = css`
+  font-size: 18px;
   justify-content: center;
   width: 100%;
 `;
@@ -35,8 +40,14 @@ export const LoginForm: FC<Props> = ({ displayForgotPassword, onSubmit, isLoggin
       <Form onSubmit={onSubmit} validateOn="onChange">
         {({ register, errors }) => (
           <>
-            <Field label="Email or username" invalid={!!errors.user} error={errors.user?.message}>
+            <Field
+              className={fontOverrideStyles}
+              label="Email or username"
+              invalid={!!errors.user}
+              error={errors.user?.message}
+            >
               <Input
+                className={fontOverrideStyles}
                 autoFocus
                 name="user"
                 ref={register({ required: 'Email or username is required' })}
@@ -44,8 +55,14 @@ export const LoginForm: FC<Props> = ({ displayForgotPassword, onSubmit, isLoggin
                 aria-label={selectors.pages.Login.username}
               />
             </Field>
-            <Field label="Password" invalid={!!errors.password} error={errors.password?.message}>
+            <Field
+              className={fontOverrideStyles}
+              label="Password"
+              invalid={!!errors.password}
+              error={errors.password?.message}
+            >
               <Input
+                className={fontOverrideStyles}
                 name="password"
                 type="password"
                 placeholder={passwordHint}
