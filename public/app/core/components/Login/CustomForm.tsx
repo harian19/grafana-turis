@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useForm, Mode, OnSubmit, DeepPartial } from 'react-hook-form';
-import { FormAPI } from '../../types';
+import { FormAPI } from '@grafana/ui/src/types';
 import { css } from 'emotion';
 
 interface FormProps<T> {
