@@ -129,7 +129,7 @@ export const getLoginStyles = (theme: GrafanaTheme) => {
       color: ${theme.colors.textSemiWeak};
     `,
     loginContent: css`
-      max-width: 50vw;
+      max-width: 40vw;
       width: 100%;
       display: flex;
       align-items: stretch;
