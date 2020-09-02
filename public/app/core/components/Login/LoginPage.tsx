@@ -15,59 +15,62 @@ import { GrafanaTheme } from '@grafana/data';
 export const LoginPage: FC = () => {
   const loginStyles = useStyles(getLoginStyles);
   return (
-    <Branding.LoginBackground className={loginStyles.container}>
-      <div className={cx(loginStyles.loginContent, Branding.LoginBoxBackground())}>
-        <div className={loginStyles.loginLogoWrapper}>
-          <Branding.LoginLogo className={loginStyles.loginLogo} />
-          <div className={loginStyles.titleWrapper}>
-            <h1 className={loginStyles.mainTitle}>{Branding.LoginTitle}</h1>
-            {/* <h3 className={loginStyles.subTitle}>Link - IOT</h3> */}
-          </div>
-        </div>
-        <LoginCtrl>
-          {({
-            loginHint,
-            passwordHint,
-            ldapEnabled,
-            authProxyEnabled,
-            disableLoginForm,
-            disableUserSignUp,
-            login,
-            isLoggingIn,
-            changePassword,
-            skipPasswordChange,
-            isChangingPassword,
-          }) => (
-            <div className={loginStyles.loginOuterBox}>
-              {!isChangingPassword && (
-                <div className={`${loginStyles.loginInnerBox} ${isChangingPassword ? 'hidden' : ''}`} id="login-view">
-                  {!disableLoginForm && (
-                    <LoginForm
-                      displayForgotPassword={!(ldapEnabled || authProxyEnabled)}
-                      onSubmit={login}
-                      loginHint={loginHint}
-                      passwordHint={passwordHint}
-                      isLoggingIn={isLoggingIn}
-                    />
-                  )}
-
-                  <LoginServiceButtons />
-                  {!disableUserSignUp && <UserSignup />}
-                </div>
-              )}
-
-              {isChangingPassword && (
-                <div className={cx(loginStyles.loginInnerBox, loginStyles.enterAnimation)}>
-                  <ChangePassword onSubmit={changePassword} onSkip={skipPasswordChange as any} />
-                </div>
-              )}
+    <div>
+      <div className={loginStyles.customBackground}></div>
+      <Branding.LoginBackground className={loginStyles.container}>
+        <div className={cx(loginStyles.loginContent, Branding.LoginBoxBackground())}>
+          <div className={loginStyles.loginLogoWrapper}>
+            <Branding.LoginLogo className={loginStyles.loginLogo} />
+            <div className={loginStyles.titleWrapper}>
+              <h1 className={loginStyles.mainTitle}>{Branding.LoginTitle}</h1>
+              {/* <h3 className={loginStyles.subTitle}>Link - IOT</h3> */}
             </div>
-          )}
-        </LoginCtrl>
+          </div>
+          <LoginCtrl>
+            {({
+              loginHint,
+              passwordHint,
+              ldapEnabled,
+              authProxyEnabled,
+              disableLoginForm,
+              disableUserSignUp,
+              login,
+              isLoggingIn,
+              changePassword,
+              skipPasswordChange,
+              isChangingPassword,
+            }) => (
+              <div className={loginStyles.loginOuterBox}>
+                {!isChangingPassword && (
+                  <div className={`${loginStyles.loginInnerBox} ${isChangingPassword ? 'hidden' : ''}`} id="login-view">
+                    {!disableLoginForm && (
+                      <LoginForm
+                        displayForgotPassword={!(ldapEnabled || authProxyEnabled)}
+                        onSubmit={login}
+                        loginHint={loginHint}
+                        passwordHint={passwordHint}
+                        isLoggingIn={isLoggingIn}
+                      />
+                    )}
 
-        <div className="clearfix" />
-      </div>
-    </Branding.LoginBackground>
+                    <LoginServiceButtons />
+                    {!disableUserSignUp && <UserSignup />}
+                  </div>
+                )}
+
+                {isChangingPassword && (
+                  <div className={cx(loginStyles.loginInnerBox, loginStyles.enterAnimation)}>
+                    <ChangePassword onSubmit={changePassword} onSkip={skipPasswordChange as any} />
+                  </div>
+                )}
+              </div>
+            )}
+          </LoginCtrl>
+
+          <div className="clearfix" />
+        </div>
+      </Branding.LoginBackground>
+    </div>
   );
 };
 
@@ -83,7 +86,7 @@ to{
 export const getLoginStyles = (theme: GrafanaTheme) => {
   return {
     container: css`
-      min-height: 100vh;
+      min-height: 80vh;
       background-position: center;
       background-repeat: no-repeat;
       min-width: 100%;
@@ -92,6 +95,10 @@ export const getLoginStyles = (theme: GrafanaTheme) => {
       display: flex;
       align-items: center;
       justify-content: center;
+    `,
+    customBackground: css`
+      background-color: #1a8bd8;
+      height: 20vh;
     `,
     submitButton: css`
       justify-content: center;
