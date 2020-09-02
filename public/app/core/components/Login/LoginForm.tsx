@@ -2,7 +2,8 @@ import React, { FC } from 'react';
 import { selectors } from '@grafana/e2e-selectors';
 
 import { FormModel } from './LoginCtrl';
-import { Button, Form, Input, Field } from '@grafana/ui';
+import { Button, Form, Field } from '@grafana/ui';
+import { Input } from './CustomLoginInput';
 import { css } from 'emotion';
 
 interface Props {
