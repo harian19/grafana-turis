@@ -14,6 +14,7 @@ interface Props {
 }
 
 const forgottenPasswordStyles = css`
+  color: black;
   display: inline-block;
   margin-top: 16px;
   float: right;
@@ -24,11 +25,19 @@ const wrapperStyles = css`
   padding-bottom: 16px;
 `;
 
-const fontOverrideStyles = css`
+const inputOverrideStyles = css`
   font-size: 18px;
+  color: black;
+  background: white;
+`;
+
+const labelOverrideStyles = css`
+  font-size: 18px;
+  color: black;
 `;
 
 export const submitButton = css`
+  margin-top: 
   font-size: 18px;
   justify-content: center;
   width: 100%;
@@ -41,13 +50,13 @@ export const LoginForm: FC<Props> = ({ displayForgotPassword, onSubmit, isLoggin
         {({ register, errors }) => (
           <>
             <Field
-              className={fontOverrideStyles}
+              className={labelOverrideStyles}
               label="Email or username"
               invalid={!!errors.user}
               error={errors.user?.message}
             >
               <Input
-                className={fontOverrideStyles}
+                className={inputOverrideStyles}
                 autoFocus
                 name="user"
                 ref={register({ required: 'Email or username is required' })}
@@ -56,13 +65,13 @@ export const LoginForm: FC<Props> = ({ displayForgotPassword, onSubmit, isLoggin
               />
             </Field>
             <Field
-              className={fontOverrideStyles}
+              className={labelOverrideStyles}
               label="Password"
               invalid={!!errors.password}
               error={errors.password?.message}
             >
               <Input
-                className={fontOverrideStyles}
+                className={inputOverrideStyles}
                 name="password"
                 type="password"
                 placeholder={passwordHint}
