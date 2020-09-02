@@ -86,7 +86,7 @@ to{
 export const getLoginStyles = (theme: GrafanaTheme) => {
   return {
     container: css`
-      min-height: 80vh;
+      min-height: 85vh;
       background-position: center;
       background-repeat: no-repeat;
       min-width: 100%;
@@ -98,7 +98,7 @@ export const getLoginStyles = (theme: GrafanaTheme) => {
     `,
     customBackground: css`
       background-color: #1a8bd8;
-      height: 20vh;
+      height: 15vh;
     `,
     submitButton: css`
       justify-content: center;
