@@ -17,7 +17,7 @@ export const LoginPage: FC = () => {
   return (
     <div>
       <div className={loginStyles.customBackground}>
-        <img className="remoteSenseLogo" alt="Remote Sense" src="public/img/whiteRSlogo.png"></img>
+        <img className={loginStyles.remoteSenseLogo} alt="Remote Sense" src="public/img/whiteRSlogo.png"></img>
       </div>
       <Branding.LoginBackground className={loginStyles.container}>
         <div className={cx(loginStyles.loginContent, Branding.LoginBoxBackground())}>
