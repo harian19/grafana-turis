@@ -110,7 +110,7 @@ export const getLoginStyles = (theme: GrafanaTheme) => {
     remoteSenseLogo: css`
       max-width: 17vh;
       margin-left: 2vh;
-      margin-right: 2vh;
+      margin-top: 2vh;
     `,
     loginLogo: css`
       width: 100%;
