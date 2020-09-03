@@ -16,13 +16,16 @@ export const LoginPage: FC = () => {
   const loginStyles = useStyles(getLoginStyles);
   return (
     <div>
-      <div className={loginStyles.customBackground}></div>
+      <div className={loginStyles.customBackground}>
+        <img className="remoteSenseLogo" alt="Remote Sense" src="public/img/whiteRSlogo.png"></img>
+      </div>
       <Branding.LoginBackground className={loginStyles.container}>
         <div className={cx(loginStyles.loginContent, Branding.LoginBoxBackground())}>
           <div className={loginStyles.loginLogoWrapper}>
             <Branding.LoginLogo className={loginStyles.loginLogo} />
             <div className={loginStyles.titleWrapper}>
-              <h1 className={loginStyles.mainTitle}>{Branding.LoginTitle}</h1>
+              <h4>Powered by Remote Sense</h4>
+              {/* <h1 className={loginStyles.mainTitle}>{Branding.LoginTitle}</h1> */}
               {/* <h3 className={loginStyles.subTitle}>Link - IOT</h3> */}
             </div>
           </div>
@@ -104,10 +107,15 @@ export const getLoginStyles = (theme: GrafanaTheme) => {
       justify-content: center;
       width: 100%;
     `,
+    remoteSenseLogo: css`
+      max-width: 17vh;
+      margin-left: 2vh;
+      margin-right: 2vh;
+    `,
     loginLogo: css`
       width: 100%;
-      max-width: 35vh;
-      margin-bottom: 40px;
+      max-width: 40vh;
+      margin-bottom: 25px;
     `,
     loginLogoWrapper: css`
       display: flex;
@@ -115,6 +123,7 @@ export const getLoginStyles = (theme: GrafanaTheme) => {
       justify-content: center;
       flex-direction: column;
       padding: ${theme.spacing.lg};
+      padding-bottom: 10px;
     `,
     titleWrapper: css`
       color: black;
@@ -129,7 +138,7 @@ export const getLoginStyles = (theme: GrafanaTheme) => {
       color: ${theme.colors.textSemiWeak};
     `,
     loginContent: css`
-      max-width: 40vw;
+      max-width: 600px;
       width: 100%;
       display: flex;
       align-items: stretch;
